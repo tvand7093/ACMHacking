@@ -8,6 +8,7 @@ namespace ACMHack
 	{
 		public HomePage ()
 		{
+			Title = "Home";
 			var button = new Button () {
 				Text = "Click me!",
 				HorizontalOptions = LayoutOptions.Fill,
