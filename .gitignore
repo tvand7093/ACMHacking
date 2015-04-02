@@ -4,6 +4,16 @@
 *.obj
 *.elf
 
+[Pp]ackages
+[Bb]in
+[Rr]elease
+[Bb]uild
+[Dd]ebug
+*.userpref
+*.suo
+*.v
+
+
 # Precompiled Headers
 *.gch
 *.pch

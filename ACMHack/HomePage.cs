@@ -15,7 +15,6 @@ namespace ACMHack
 				VerticalOptions = LayoutOptions.End
 			};
 
-
 			var label = new Label () {
 				Text = "Hello world!",
 				VerticalOptions = LayoutOptions.Center,
@@ -26,9 +25,9 @@ namespace ACMHack
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.Fill
 			};
-					
+
 			button.Clicked += (object sender, EventArgs e) => {
-				label.Text = String.IsNullOrEmpty(textBox.Text) ? "You didn't set text!" : textBox.Text;
+				label.Text =  String.IsNullOrEmpty(textBox.Text) ? "You didn't set text!" : textBox.Text;
 			};
 
 			Content = new StackLayout { 
