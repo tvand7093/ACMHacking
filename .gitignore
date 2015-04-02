@@ -10,7 +10,7 @@
 [Bb]uild
 [Dd]ebug
 [Oo]bj
-*.userpref
+*.userprefs
 *.suo
 *.v
 
