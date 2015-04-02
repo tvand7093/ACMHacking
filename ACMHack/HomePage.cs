@@ -10,24 +10,38 @@ namespace ACMHack
 		{
 			var button = new Button () {
 				Text = "Click me!",
-				HorizontalOptions = LayoutOptions.FillAndExpand,
+				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.End
 			};
 
+
 			var label = new Label () {
 				Text = "Hello world!",
-				VerticalOptions = LayoutOptions.CenterAndExpand
+				VerticalOptions = LayoutOptions.Center,
+				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
 
+			var textBox = new Entry () {
+				HorizontalOptions = LayoutOptions.Fill,
+				VerticalOptions = LayoutOptions.Fill
+			};
+					
 			button.Clicked += (object sender, EventArgs e) => {
-				label.Text = "I changed it!";
+				label.Text = String.IsNullOrEmpty(textBox.Text) ? "You didn't set text!" : textBox.Text;
 			};
 
 			Content = new StackLayout { 
 				Children = {
-					label, button
+					new StackLayout {
+						Children = {
+							label, textBox
+						},
+						HorizontalOptions = LayoutOptions.FillAndExpand,
+						VerticalOptions = LayoutOptions.CenterAndExpand,
+					},
+					button
 				},
-				HorizontalOptions = LayoutOptions.CenterAndExpand,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				Padding = new Thickness(20)
 			};
